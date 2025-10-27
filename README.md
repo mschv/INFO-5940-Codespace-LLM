@@ -1,7 +1,29 @@
-# INFO 5940 
-Welcome to the INFO 5940 repository. You will complete your work using [**GitHub Codespaces**](#about-github-codespaces) and save your progress in your own GitHub repository. This guide will walk you through setting up the development environment and running the test notebook.  
+# Career Advisor
+Welcome to Career Advisor, a RAG application that provides personalized career advice based on uploaded documents such as resumes, cover letters, and job postings.
 
-## Getting Started 
+## How to Use
+1. **Upload Documents**: Click the file uploader and select one or more documents (.pdf, .txt, .md)
+2. **Wait for Processing**: The application will chunk and index your documents
+3. **Ask Questions**: Type questions like:
+   - "What skills should I develop for a data science role?"
+   - "How does my experience match this job posting?"
+   - "What are my strongest qualifications?"
+4. **Get Advice**: Receive personalized, actionable career guidance
+
+
+## Changes to Provided Configuration
+1. Changed the names of the files:
+   - career_advisor.py: full app that combines langchain and streamlit
+   - langchain_code.ipynb: Jupiternotebook used to test the langchain code, based on the class template
+   - streamlit_code.py: python file used to test the streamlit code, based on the class template
+2. Deleted the data txt and uploaded Resume Maria Chang.pdf for tests.
+3. Added pdfpumlber to the requirement text
+4. Updated to langchain-chroma==1.00
+5. Changed the system prompt and messages so that it adapts from just a pdf uploader to a career advisor. 
+6. changed the code so that it now uploads txt, pdf, and md. 
+7. changed the code so that it now allows multiple uploads. 
+
+
 
 ### Step 1: Fork this repository 
 1. Click the **Fork** button (top right of this page).
@@ -37,26 +59,7 @@ Codespaces is not free, but their per-month [free quota](https://docs.github.com
 * Unless you're on a free plan, or within your free quota, costs acrue while the codespace is running, whether or not you have it open in your browser or are working on it
 * You can control when it's running, and the space it takes up.  Check out [GitHub's codespaces lifecycle documentation](https://docs.github.com/en/codespaces/about-codespaces/understanding-the-codespace-lifecycle)
 
-## Sync Updates 
-To make sure your personal forked repository stays up to date with the original class repository, please follow these steps:
-1. Open your forked repo.
-2. At the top of the page, you should see a banner or menu option that shows whether your fork is behind the original repo.
-3. Click the **Sync fork** button.
-4. In the dropdown, choose **Update branch** to pull the latest changes from the original repo into your fork.
 
-Optionally, you can also follow these steps to create a new branch on your fork:
-1. Open your **forked repository** on GitHub.  
-2. At the top of the page, next to the branch dropdown, click the **Branches** button.  
-3. In the **Branches** view, click the green **New Branch** button.  
-4. In the popup window, enter a branch name.  
-   - You can use any name you like, but it’s recommended to match the branch name used in class for better organization.  
-5. Under **Branch source**, select:  
-   - **Repository:** `AyhamB/INFO-5940-Codespace`  
-   - **Branch:** choose the branch you want to sync from (e.g., `streamlit`).  
-6. Click the green **Create New Branch** button.  
-7. Verify that you’re now back in **your fork**, on the new branch you just created.  
-8. Click the **Code** button and create a new Codespace (if you don’t already have one).  
-   - Make sure the Codespace is created from the **current branch**.
   
 ## Running a Streamlit App on Codespaces  
 Follow these steps to launch and view your Streamlit app in GitHub Codespaces:
